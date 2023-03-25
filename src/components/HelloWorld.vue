@@ -25,8 +25,11 @@
       <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
       <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
+        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+      <h3>你好，世界！</h3>
+      <h3 v-html="`你好，世界！`"></h3>
+      <h3 v-html="`世界你好！`"></h3>
   </div>
 </template>
 
@@ -35,7 +38,12 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+    data() {
+      return {
+          a : "你好，世界！"
+      }
+    }
 }
 </script>
 
