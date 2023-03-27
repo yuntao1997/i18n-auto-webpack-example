@@ -1,7 +1,9 @@
 const {defineConfig} = require('@vue/cli-service')
-const path = require.resolve('path-browserify')
 const {resolve: pathResolve} = require('path')
 const i18nAutoPlugin = require('i18n-auto-webpack/plugin')
+
+
+console.log(__dirname, pathResolve(__dirname, 'src'))
 
 const i18nAutoLoaderOptions = {
     watch: true,
@@ -10,8 +12,10 @@ const i18nAutoLoaderOptions = {
         name: 'i18n',
         value: '@/i18n/index.js'
     },
-    includes: [pathResolve('./src')], // 只处理src目录下的文件
-    transform: true
+    // includes: [pathResolve('./src')], // 只处理src目录下的文件
+    transform: true,
+    includes: [pathResolve( './src/')],
+    excludes: [pathResolve( './node_modules/'),pathResolve( './src/utils/')]
 }
 
 

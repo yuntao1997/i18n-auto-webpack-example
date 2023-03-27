@@ -12,7 +12,7 @@ Vue.use(ElementUI, {size: 'mini', zIndex: 3000})
 
 
 import i18n from './i18n'
-
+import './utils'
 new Vue({
   router,
   i18n,
